@@ -1,4 +1,6 @@
 # Guess_the_number
-- Little python game where the computer generates a secret number and the user has to guess that number.
+ *2 little python game where: 
+  *The computer generates a secret number and the user has to guess that number. (computer.py)
+  *The user inputs a secret number and the computer guess the secret number. (user.py)
 
 

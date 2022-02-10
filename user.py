@@ -1,12 +1,17 @@
 import random
 
+low = 0
+high = 1000
 
 def input_secret_num():
     try:
         while True:
-            user_input = int(input("Enter a secret num (between 0 and 20): "))
-            if user_input > 20 or user_input < 0:
-                print("Out of range !")
+            try:
+                user_input = int(input(f"Enter a secret num (between {low} and {high}): "))
+            except ValueError:
+                user_input = -1
+            if user_input > high or user_input < low:
+                print("Wrong input !")
             else:
                 return user_input
     except ValueError as e:
@@ -14,8 +19,6 @@ def input_secret_num():
 
 
 user_num = input_secret_num()
-low = 0
-high = 20
 
 while True:
     computer_num = random.randint(low, high)
